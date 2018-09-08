@@ -15,8 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::find(1);
-        Log::info('User id : ' . $user->id);
+        Log::info('User failed to login.', ['id' => 1, 'name' => 'Tum']);
     }
 
     /**
