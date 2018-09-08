@@ -19,6 +19,9 @@ Route::resource('orders', 'OrderController')->except([
     'create', 'store', 'update', 'destroy'
 ]);
 
+Route::resource('log', 'LogController');
+Route::resource('users', 'UserController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
