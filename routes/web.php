@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('orders', 'OrderController')->except([
+    'create', 'store', 'update', 'destroy'
+]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
